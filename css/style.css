@@ -24,3 +24,30 @@ a:visited {
 a:hover {
    color:#222328;
 }
+clearfix:after {
+   display: block;
+   content: "";
+   clear: both;
+}
+/* --------header start */
+
+img  {
+   min-width: 100%;
+}
+.logo {
+   float: left;
+   width: 200px;
+   height: 100px;
+}
+
+header .mainmenu {
+  float: right;
+
+}
+header .mainmenu>li {
+   float:left;
+}
+header .mainmenu>li>a {
+   display: block;
+   padding: 5px 10px;
+}
