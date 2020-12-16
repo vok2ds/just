@@ -12,6 +12,10 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
    padding: 0;
 
 }
+#container {
+   width: 1200px;
+   margin: 0 auto;
+}
 ul {
    list-style: none;
 }
@@ -24,11 +28,15 @@ a:visited {
 a:hover {
    color:#222328;
 }
-clearfix:after {
+a {
+   text-decoration: none;
+}
+.clearfix:after {
    display: block;
    content: "";
    clear: both;
 }
+
 /* --------header start */
 
 img  {
@@ -46,8 +54,86 @@ header .mainmenu {
 }
 header .mainmenu>li {
    float:left;
+   width: 200px;
+   text-align: center;
+   position: relative;
+   transition:all 0.4s;
+   border: 1px solid #000;
 }
 header .mainmenu>li>a {
    display: block;
    padding: 5px 10px;
+ 
+
+}
+header .mainmenu>li>a:hover {
+   background:royalblue;
+   color:#fff;
+}
+
+header .submenu {
+   display: none;
+   border: 1px solid red;
+   position: absolute;
+    z-index: 1;
+   width: 100%;
+   
+}
+
+header .submenu li>a {
+   display: block;
+   padding: 5px 10px;
+   transition: all 0.4s;
+}
+header .submenu li>a:hover {
+   background: saddlebrown;
+   color:white;
+}
+#slide {
+   border: 1px solid #000;
+   width: 1200px;
+   height: 300px;
+   position: relative;
+   overflow: hidden;
+}
+#slide img {
+   position: absolute;
+}
+
+/* ---tab_menu */
+#contents {
+   width: 1200px;
+   height: 300px;
+}
+.tab_menu {
+   border: 1px solid #000;
+   position:relative;
+   width: 600px;
+   left:50%;
+   margin-left:-300px;
+}
+.contents_box>li {
+   border: 1px solid #000;
+   width: 400px;
+}
+.tab_menu>li>a {
+   position: absolute;
+   color:#000;
+   font-size: 12px;
+
+}
+.tab_menu>li+li>a {
+   left:100px;
+}
+li.on>.contents{
+   width: 100%;
+   height: 200px;
+   margin-top: 25px;
+   background: #efefef;
+   border: 1px solid red;
+}
+.contents {
+   position: absolute;
+   overflow: hidden;
+   height:0;
 }
