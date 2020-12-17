@@ -1,3 +1,8 @@
+:root {
+   --mainColor:#f8b62d;
+   --subColor:#8fd3f5;
+   --textColor:#222328;
+}
 body {
    margin: 0;
    padding: 0;
@@ -15,6 +20,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 #container {
    width: 1200px;
    margin: 0 auto;
+   border: 1px solid #000;
 }
 ul {
    list-style: none;
@@ -50,6 +56,7 @@ img  {
 
 header .mainmenu {
   float: right;
+  border-bottom: 1px solid #000;
 
 }
 header .mainmenu>li {
@@ -58,35 +65,43 @@ header .mainmenu>li {
    text-align: center;
    position: relative;
    transition:all 0.4s;
-   border: 1px solid #000;
+
+  
+   
 }
+
 header .mainmenu>li>a {
    display: block;
-   padding: 5px 10px;
- 
-
+   padding:10px;
 }
 header .mainmenu>li>a:hover {
-   background:royalblue;
+   background:var(--mainColor);
    color:#fff;
 }
 
 header .submenu {
-   display: none;
-   border: 1px solid red;
+   display: black;
    position: absolute;
-    z-index: 1;
+   z-index: 1;
    width: 100%;
-   
+   background:var(--mainColor);
+   color:white;
+   border-top: 1px solid #000;
+   border-bottom:1px solid #000;
 }
+header .submenu:nth-child(2){
+   border-left: 1px solid black;
+}
+
 
 header .submenu li>a {
    display: block;
-   padding: 5px 10px;
+   padding: 10px;
    transition: all 0.4s;
+   
 }
 header .submenu li>a:hover {
-   background: saddlebrown;
+   background: var(--subColor);
    color:white;
 }
 #slide {
@@ -105,35 +120,49 @@ header .submenu li>a:hover {
    width: 1200px;
    height: 300px;
 }
-.tab_menu {
-   border: 1px solid #000;
-   position:relative;
-   width: 600px;
-   left:50%;
-   margin-left:-300px;
-}
 .contents_box>li {
+   float: left;
    border: 1px solid #000;
    width: 400px;
+   height: 300px;
+  box-sizing: border-box;
+  
 }
-.tab_menu>li>a {
+.tab_menu {
+   position:relative;
+   width: 400px;
+   height: 300px;
+  
+  
+}.tab_menu li>a {
+   width: 100px;
+   height: 40px;
+   line-height: 40px;
+   display: block;
+   text-align: center;
    position: absolute;
    color:#000;
-   font-size: 12px;
+   
 
 }
+
 .tab_menu>li+li>a {
    left:100px;
+   top:0;
 }
-li.on>.contents{
+li.on>a {
+   display:block;
+   background: var(--mainColor);
+}
+li.on>.cont{
    width: 100%;
-   height: 200px;
-   margin-top: 25px;
-   background: #efefef;
-   border: 1px solid red;
+   height:260px;
+   margin-top: 40px;
+   background: var(--mainColor);
+
 }
-.contents {
+.cont{
    position: absolute;
-   overflow: hidden;
+   overflow:hidden; 
    height:0;
 }
